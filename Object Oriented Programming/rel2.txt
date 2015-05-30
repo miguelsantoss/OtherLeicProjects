@@ -1,0 +1,23 @@
+	No nosso projeto da Folha de Calculo, a classe SheetManager controla todos os aspetos ligados ao ler
+objetos de outros ficheiros, escrever os nossos objetos em ficheiros e trabalhar com a CalcSheet que tem ativa.
+Esta ultima e a nossa designada folha de calculo. A mesma tem um numero fixo de linhas e colunas, bem como um
+Array onde guarda as Cells que a compoem e um outro com os conteudos que estao presentes no CutBuffer.
+	Esta CalcSheet tem a responsabilidade maxima aquando da execucao de qualquer menu de edicao, pois este
+tem de operar sempre sobre a colecao de celulas da mesma. Para alem disso, tem um nome pela qual e designada
+e nesta classe que esta a fabrica produtora de objetos (novas Cells e/ou respetivos Contents) quando e
+realizado o import de qualquer ficheiro ou de instrucoes nossas. Para alem das operacoes sobre todas as Cells
+que tem armazenadas, tambem pode operar sobre 2 ou mais destas, tambem designadas por Gamma, e interagir com
+o nosso CutBuffer para a alteracao ou copia de conteudos.
+	Atraves do padrao de desenho composite, qualquer celula tem o seu conteudo: este pode ser uma
+CellReference para outra Cell, um Literal ou uma funcao cujos dois operandos sao combinacoes entre Cells e
+Literais. A qualquer Cell pode ser pedido o seu valor, o qual esta definido tal e qual como no enunciado:
+CellReference retorna o valor da sua referencia, um Literal retorna-se a si proprio e uma funcao retorna
+o resultado da execucao da mesma, a qual varia tendo em conta o conceito que representa. Para alem disso, 
+estes conteudos podem ser visitados pelas classes de Search, tornando mais facil a implementacao de subclasses
+que implementem aquela interface.
+	No que toca as Functions, estas podem ter dois tipos diferentes, dependendo do numero de argumentos: no
+caso de serem apenas dois, e uma BinaryFunction; ou uma GammaFunction, dois ou mais argumentos, dispostos num
+Array. Sempre que lhes e requerido o avaliacao dos seus argumentos, elas tratam de mostrar o seu valor.
+	No que toca a limitacoes do programa, o mesmo, aquando do import de um ficheiro, nao executa de igual
+forma a procura de um valor numa cadeia de CellReference fazendo o import do ficheiro com as intrucoes e
+correndo instrucao a instrucao.

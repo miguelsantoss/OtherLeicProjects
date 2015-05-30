@@ -1,0 +1,32 @@
+	Como topo da hierarquia temos um gestor de folhas de cálculo que tem sempre uma folha activa e que pode guardar, 
+criar e abrir novas folhas, o qual é um agregado de uma ou mais páginas. Cada página contém um número específico 
+de linhas e colunas, bem como cut buffer, o qual armazena sempre a informação que está a ser copiada ou cortada.
+Podemos implicar várias funções sobre esta folha: inserir uma célula e o respectivo conteúdo, copiar, apagar, cortar
+e colar células. A relação entre a folha e uma das suas células é gerida por uma caixa negra: um gestor de células que
+trata uma estrutura de dados, no nosso caso, uma array list, onde armazenamos cada célula e respectiva informação, 
+sendo que este gestor de células é composto por uma ou mais destas. 
+	Designamos por gama um agregado de uma ou mais células, a qual tem uma célula a marcar o seu ínicio e o seu fim
+e também um comparador para testar de um intervalo de células é compatível com um outro alvo. Estas células, para além
+de terem dois inteiros para designar a linha e a coluna a qual pertence, é composta também por um contéudo. Este é de 
+três tipos diferentes: pode ser um literal, o qual não é nada mais que um valor inteiro; uma referência para uma célula
+presente na nossa estrutura de dados; ou uma função, a qual tem um nome que a identifica a quando da representação na
+estrutura de dados e uma função para executar todas as suas subclasses, tendo em conta que cada uma tem o seu tipo de 
+acção. Estas funções são um agregado de um ou mais conteúdos. As classes de adição, subtração, multiplicação e divisão 
+recebem dois argumentos na sua contrução os quais
+ficam designados como atributos nessa instância para que quando seja necessário, elas retornem um valor tendo em conta a
+operação aritmética designada. Já no que toca à média e piatório, estas classes recebem uma gama no seu contrutor e
+tratam de percorrer a mesma a quando da execução da sua respectiva função.
+	Como interface temos uma Procura, a qual trata de percorrer a nossa estrutura de dados à procura de um valor
+ou um conteúdo específicos entre as nossas células.
+	No que tocas às nossas escolhas, primeiramente, optámos por utilizar um array list, uma vez que, para além da 
+simplicidade na implementação, é estável e não ocupa muita memória, visto que vamos aumentar o vector à medida que 
+criamos células; Implementámos uma interface procura na folha, uma vez que é mais fácil utilizar a nossa "caixa negra",
+que é a nossa coleção de células, de forma a ir à procura da(s) célula(s) alvo no nosso array list, seja essa procura
+por valor ou por nome de função. No que toca a esta última, optámos por, caso o conteúdo seja uma função, que esta mesma
+esteja identificada pelo seu nome específico bem como os argumentos que virão a ser devidamente identificados. 
+Decidimos optar por uma gama para trabalhar com intervalos de células, evitando inúmeras comparações. Para além disto,
+nos contrutores das funções binárias como ADD, SUB, MUL ou DIV, fazemos overload dos construtores de cada função,
+havendo no total quatro, para todas as combinações de dois argumentos sejam eles células ou inteiros. O nosso objectivo
+é dar um valor inteiro aos dois operadores, presentes na classe como atributos, mesmo que, no caso de serem células,
+tenhamos de usar funções como getContent() seguida de getValue(), para que, quando queiramos saber o valor de cada célula
+tenhamos apenas que executar a instância da classe sobre a qual estamos a trabalhar.

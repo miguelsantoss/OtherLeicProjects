@@ -1,0 +1,625 @@
+﻿/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///                                                                                                              ///
+///                                                Body                                                          ///
+///                                                                                                              ///
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+* { margin: 0; padding: 0; }
+
+body{
+	font-family: arial;
+}
+
+#ImagemDeFundo{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: #ebebeb;
+}
+
+#background_mapa {
+	width: auto;
+	max-height: 100%;
+}
+
+#ajuda_menus {
+	background-image: url(images/ajuda2.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 201px;
+	height: 250px;
+	position: absolute;
+	top: 330px;
+	left: 1289px;
+	display: none;
+}
+
+.menus {
+	background-image: url(images/2.png);
+	background-position: center;
+	width: 400px;
+	height: 250px;
+	position: absolute;
+	top: 330px;
+	left: 890px;
+	display: none;
+}
+
+#ajuda {
+	position: absolute;
+	top: 190px;
+	left: 90px;
+	height:20px;
+	width: 120px;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///                                                                                                              ///
+///                                                Menu Geral                                                    ///
+///                                                                                                              ///
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#ImagemDeFundo #desligado {
+	width: 400px;
+	height: 45px;
+	background-image: url(images/menupequeno.png);
+	background-repeat: no-repeat;
+	position:absolute;
+	display: none;
+	left:900px;
+	top:533px
+}
+
+#legenda_menu_desligado_imagem {
+	position: absolute;
+	left:20px;
+	top:12px
+}
+
+#legenda_menu_desligado {
+	position: absolute;
+	left:40px;
+	top:12px
+}
+
+#hidden_text {
+	position: absolute;
+	top: 160px;
+	left: 137px;
+	height:20px;
+	width: 120px;
+}
+
+#seta_esquerda_menu_geral {
+	position: absolute;
+	top: 160px;
+	left: 124px;
+}
+
+#seta_direita_menu_geral {
+	position: absolute;
+	top: 160px;
+	left: 260px;
+}
+
+#legenda_menu_geral_imagem2 {
+	position: absolute;
+	top: 210px;
+	left: 116px; 
+}
+
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///                                                                                                              ///
+///                                                Paquimetro                                                    ///
+///                                                                                                              ///
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#MenuDoParque #time {
+	display:block;
+	margin:auto;
+	width: 40px;
+	height: 40px;
+
+}
+
+#ImagemDeFundo #ImagemAContar {
+	width: 135px;
+	height: 206px;
+	background-image: url(images/3.png);
+	background-repeat: no-repeat;
+	opacity: .7;
+	position:absolute;
+	display: none;
+	left:90px;
+	top:30px
+}
+
+#ImagemAContar > img {
+	position: absolute;
+	top: 45px;
+	left: 5px;
+} 
+
+#hidden_text5 {
+	position: absolute;
+	top: 160px;
+	left: 125px;
+	height:20px;
+	width: 150px;
+}
+
+#60 {
+	width: 150px;
+
+}
+
+#seta_esquerda_paquimetro_metodo_pagamento {
+	position: absolute;
+	top: 158px;
+	left: 110px;
+}
+
+#seta_direita_paquimetro_metodo_pagamento {
+	position: absolute;
+	top: 158px;
+	left: 280px;
+}
+
+#legenda_paquimetro_metodo_pagamento_imagem2 {
+	position: absolute;
+	top: 210px;
+	left: 116px;
+}
+
+#legenda_paquimetro_metodo_pagamento_dinheiro_imagem2 {
+	position: absolute;
+	top: 210px;
+	left: 150px; 
+}
+
+#legenda_combustivel_bombas_mapa_alerta {
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	font-style:normal;
+	line-height:20px;
+	text-decoration:none;
+	position: absolute;
+	top: 225px;
+	left: 50px; 
+}
+
+#legenda_combustivel_bombas_mapa_alerta_imagem {
+	position: absolute;
+	top: 225px;
+	left: 25px; 
+}
+
+#legenda_combustivel_bombas_mapa_alerta_imagem2 {
+	position: absolute;
+	top: 225px;
+	left: 135px; 
+}
+
+#legenda_configurar_combustivel_marcas_imagem2 {
+	position: absolute;
+	top: 210px;
+	left: 215px; 
+}
+
+#legenda_configurar_combustivel_km_imagem2 {
+	position: absolute;
+	top: 210px;
+	left: 220px; 
+}
+
+#legenda_editar_bancos_imagem2 {
+	position: absolute;
+	top: 210px;
+	left: 227px; 
+}
+
+#legenda_editar_bagagem_imagem2 {
+	position: absolute;
+	top: 210px;
+	left: 210px; 
+}
+
+#legenda_paquimetro_metodo_pagamento_debito_imagem2 {
+	position: absolute;
+	top: 210px;
+	left: 116px; 
+}
+
+#legenda_paquimetro_metodo_pagamento_dinheiro_mapa_imagem2 {
+	position: absolute;
+	top: 210px;
+	left: 116px; 
+}
+
+#legenda_paquimetro_metodo_pagamento_CTT_imagem2 {
+	position: absolute;
+	top: 210px;
+	left: 116px; 
+}
+
+#legenda_paquimetro_pop_up_imagem2 {
+	position: absolute;
+	top: 210px;
+	left: 150px; 
+}
+
+#legenda_paquimetro_pop_up2_imagem2 {
+	position: absolute;
+	top: 210px;
+	left: 116px; 
+}
+
+#legenda_paquimetro_continuar_a_contar_imagem2 {
+	position: absolute;
+	top: 210px;
+	left: 150px; 
+}
+
+#legenda_combustivel_pop_up_imagem2 {
+	position: absolute;
+	top: 210px;
+	left: 150px; 
+}
+
+#legenda_combustivel_pop_up_ignora_imagem2 {
+	position: absolute;
+	top: 210px;
+	left: 150px; 
+}
+
+#legenda_paquimetro_pop_up_ignora_imagem2 {
+	position: absolute;
+	top: 210px;
+	left: 150px; 
+}
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///                                                                                                              ///
+///                                               Personalizar                                                   ///
+///                                                                                                              ///
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+#legenda_personalizar_geral_imagem2 {
+	position: absolute;
+	top: 210px;
+	left: 163px;
+}
+
+#legenda_personalizar_geral_activar_editar_imagem2 {
+	position: absolute;
+	top: 210px;
+	left: 163px;
+}
+
+#legenda_personalizar_editar_modelo_imagem2 {
+	position: absolute;
+	top: 210px;
+	left: 116px;
+}
+
+#seta_esquerda_personalizar_geral {
+	position: absolute;
+	top: 160px;
+	left: 125px;
+}
+
+#seta_direita_personalizar_geral {
+	position: absolute;
+	top: 160px;
+	left: 262px;
+}
+
+#seta_esquerda_personalizar_modelo {
+	position: absolute;
+	top: 160px;
+	left: 128px;
+}
+
+#seta_direita_personalizar_modelo {
+	position: absolute;
+	top: 160px;
+	left: 265px;
+}
+
+#hidden_text3 {
+	position: absolute;
+	top: 160px;
+	left: 138px;
+	height:20px;
+	width: 120px;
+}
+#hidden_text6 {
+	position: absolute;
+	top: 160px;
+	left: 141px;
+	height:20px;
+	width: 120px;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///                                                                                                              ///
+///                                               Combustivel                                                    ///
+///                                                                                                              ///
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#image_combustivel {
+	position: absolute;
+	top: 60px;
+	left: 165px; 
+}
+
+#image_combustivel2 {
+	position: absolute;
+	top: 60px;
+	left: 165px; 
+}
+
+#legenda_combustivel_geral_imagem2 {
+	position: absolute;
+	top: 210px;
+	left: 116px; 
+}
+
+#seta_esquerda_combustivel_geral {
+	position: absolute;
+	top: 160px;
+	left: 110px;
+}
+
+#seta_direita_combustivel_geral {
+	position: absolute;
+	top: 160px;
+	left: 277px;
+}
+
+#hidden_text2 {
+	position: absolute;
+	top: 160px;
+	left: 124px;
+	height:20px;
+	width: 150px;
+}
+
+#hidden_text4 {
+	position: absolute;
+	top: 160px;
+	left: 150px;
+	height:20px;
+	width: 100px;
+}
+
+
+#seta_esquerda {
+	position: absolute;
+	top: 155px;
+	left: 89px;
+}
+
+#seta_direita {
+	position: absolute;
+	top: 155px;
+	left: 185px;
+}
+
+#seta_esquerda3 {
+	position: absolute;
+	top: 153px;
+	left: 89px;
+}
+
+#seta_direita3 {
+	position: absolute;
+	top: 153px;
+	left: 185px;
+}
+
+#seta_esquerda4 {
+	position: absolute;
+	top: 153px;
+	left: 89px;
+}
+
+#seta_direita4 {
+	position: absolute;
+	top: 153px;
+	left: 185px;
+}
+
+#seta_esquerda_2 {
+	position: absolute;
+	top: 155px;
+	left: 89px;
+}
+
+#seta_direita_2 {
+	position: absolute;
+	top: 155px;
+	left: 185px;
+}
+
+#seta_esquerda_criterio_bomba {
+	position: absolute;
+	top: 160px;
+	left: 137px;
+}
+
+#seta_direita_criterio_bomba {
+	position: absolute;
+	top: 160px;
+	left: 253px;
+}
+
+#legenda_combustivel_criterio_bomba_imagem2 {
+	position: absolute;
+	top: 210px;
+	left: 200px; 
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///                                                                                                              ///
+///                                            Funcionamento menus                                               ///
+///                                                                                                              ///
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/	
+
+.carrocel_text {
+	background-color:#2c8ae8;
+	-webkit-border-top-left-radius:42px;
+	-moz-border-radius-topleft:42px;
+	border-top-left-radius:42px;
+	-webkit-border-top-right-radius:42px;
+	-moz-border-radius-topright:42px;
+	border-top-right-radius:42px;
+	-webkit-border-bottom-right-radius:42px;
+	-moz-border-radius-bottomright:42px;
+	border-bottom-right-radius:42px;
+	-webkit-border-bottom-left-radius:42px;
+	-moz-border-radius-bottomleft:42px;
+	border-bottom-left-radius:42px;
+	text-indent:0px;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	font-style:normal;
+	line-height:20px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #000000;
+}
+
+.item_left {
+	position: absolute;
+	height:100;
+	width:150px;
+	opacity: 0.25;
+	top: 80px;
+	left: 90px;
+}
+
+.item_mid {
+	position: absolute;
+	height:100;
+	width:150px;
+	opacity: 0.25;
+	top: 80px;
+	left: 165px;
+	opacity: 1;
+}
+
+.item_right {
+	position: absolute;
+	height:100;
+	width:150px;
+	opacity: 0.25;
+	top: 80px;
+	left: 240px;
+}
+
+.hidden {
+	display: none;
+}
+
+.carousel_image {
+	width: 70px;
+	height: 70px;
+}
+
+.legenda_menu {
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	font-style:normal;
+	line-height:20px;
+	text-decoration:none;
+	position: absolute;
+	top: 210px;
+	left: 50px; 
+}
+
+.legenda_img{
+	position: absolute;
+	top: 210px;
+	left: 25px; 
+}
+
+.Descricao_menu {
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	font-style:normal;
+	line-height:20px;
+	text-decoration:none;
+}
+
+.BotaoGeral {
+	background-color:#2c8ae8;
+	-webkit-border-top-left-radius:42px;
+	-moz-border-radius-topleft:42px;
+	border-top-left-radius:42px;
+	-webkit-border-top-right-radius:42px;
+	-moz-border-radius-topright:42px;
+	border-top-right-radius:42px;
+	-webkit-border-bottom-right-radius:42px;
+	-moz-border-radius-bottomright:42px;
+	border-bottom-right-radius:42px;
+	-webkit-border-bottom-left-radius:42px;
+	-moz-border-radius-bottomleft:42px;
+	border-bottom-left-radius:42px;
+	text-indent:0px;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	font-style:normal;
+	line-height:20px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #000000;
+	height:20px;
+	width:75px;
+	opacity: 0.68;
+}
+
+.sair_ajuda_botao {
+	height:20px;
+	width:150px;
+}
+
+.selected {
+	border-width: 2px;
+	border-style: solid;
+	border-color: #ffa200;
+	opacity: 1;
+}
+
+.setas {
+	height: 10px;
+	width: 10px;
+}
+

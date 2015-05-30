@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>Prototipo</title>
+	<script src="javascript/jquery-1.11.0.js"></script>
+	<script src="javascript/jquery.jkey.js"></script>
+	<script src="javascript/move.js"></script>
+	<script src="javascript/menus.js"></script>
+	<link href="menus.css" rel="stylesheet" type="text/css" />
+</head>
+<body onLoad = "menu_inicial_desligar()">
+		<div id = "ImagemDeFundo">
+			<img id="background" src="images/fundonovo.png"/>
+
+					<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+					     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+						 ///                                                                                                                ///
+						 ///                                               Menu Geral                                                       ///
+						 ///                                                                                                                ///
+						 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+					     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+					-->
+					
+					<div id = "desligado" class = "menus">
+						<div id = "legenda_menu_desligado_imagem"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_menu_desligado" class="legenda_menu"><span></span></div>
+					</div>
+					
+					<!-- Menu Geral -->
+					<div id="carousel_modelo_carro" class = "menus">
+						<center><br><span class = "Descricao_menu">Selecione a funcionalidade:</span><br></center>
+						<center><div id = "seta_cima"><img class = "setas" src="images/seta_cima.png"/></div></center>
+						<div id="0" class = "item_left" onclick="Personalizar()" ><img class="carousel_image" src="images/per.png"/></div>
+						<div id="1" class = "item_mid" onclick="Combustivel()"><img class="carousel_image" src="images/gas.png"/></div>
+						<div id="2" class = "item_right" onclick="menu_paquimetro()"><img class="carousel_image" src="images/parquimetro_icone.png"/></div>
+						<div id="3" class = "hidden" onclick=""><img class="carousel_image" src="images/gps.png"/></div>
+						<div id="4" class = "hidden" onclick=""><img class="carousel_image" src="images/ar_condicionado.png"/></div>
+						<div id="5" class = "hidden" onclick=""><img class="carousel_image" src="images/cam.png"/></div>
+						<div id="6" class = "hidden" onclick=""><img class="carousel_image" src="images/estado_do_motor.png"/></div>
+						<div id="7" class = "hidden" onclick=""><img class="carousel_image" src="images/leitor_dvd.png"/></div>
+						<div id="8" class = "hidden" onclick=""><img class="carousel_image" src="images/radioicon.png"/></div>
+						<div id="9" class = "hidden" onclick="ActivarAjuda()"><img class="carousel_image" src="images/helpd.png"/></div>
+						<div id = "seta_esquerda_menu_geral"><img class = "setas" src="images/seta_para_esquerda.png"/></div>
+						<div id = "seta_direita_menu_geral"><img class = "setas" src="images/seta_para_direita.png"/></div>
+						<div id = "hidden_text" class="carrocel_text"><span>Combustível</span></div>
+						<div id = "legenda_menu_geral_imagem" class="legenda_img"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_menu_geral_imagem2"><img src="images/backlegenda.png"/></div>
+						<div id = "legenda_menu_geral" class="legenda_menu"><span></span></div>
+					</div>
+					
+					<div id = "ajuda_menus">
+						<span id = "span_ajuda" class = "Descricao_menu"></span>
+					</div>
+					
+					<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+					     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+						 ///                                                                                                                ///
+						 ///                                               Combustivel                                                      ///
+						 ///                                                                                                                ///
+						 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+					     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+					-->
+					
+                    <!--  Menu Inicial - Combustivel -->
+					
+					<div id="carousel_combustivel" class = "menus">
+						<center><br><span class = "Descricao_menu">Configuração de alerta-combustível:</span><br></center>
+						<center><div id = "seta_cima"><img class = "setas" src="images/seta_cima.png"/></div></center>
+						<div id="13" class = "item_left" onclick="configurar_combustivel()"><img class="carousel_image" src="images/combustivel.png"/></div>
+						<div id="14" class = "item_mid" onclick="configurar_alerta()" ><img class="carousel_image" src="images/sinos_alerta.png"/></div>
+						<div id="15" class = "item_right" onclick="mostrar_mapa()"><img class="carousel_image" src="images/mapa_bombas.png"/></div>
+						<div id="16" class = "hidden" onclick="ActivarAjuda()"><img class="carousel_image" src="images/help.png"/></div>
+						<div id = "seta_esquerda_combustivel_geral"><img class = "setas" src="images/seta_para_esquerda.png"/></div>
+						<div id = "seta_direita_combustivel_geral"><img class = "setas" src="images/seta_para_direita.png"/></div>
+						<div id = "hidden_text2" class="carrocel_text"><span>Configurar Alerta</span></div>
+						<div id = "legenda_combustivel_geral_imagem" class="legenda_img"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_combustivel_geral_imagem2" class="legenda_img"><img src="images/backlegenda.png"/></div>
+						<div id = "legenda_combustivel_geral" class="legenda_menu"><span></span></div>
+					</div>
+					
+                    <!-- Configurar combustivel - marcas favoritas -->
+					
+					<div id="configurar_combustivel_marcas" class = "menus">
+						<center><br><span class = "Descricao_menu">Configuração da bomba favorita:</span><br></center>
+						<div id="image_combustivel"><img class="carousel_image" src="images/combustivel.png"/></div><br><br><br><br><br><br>
+						<div id = "seta_esquerda" class = "hidden"><img class = "setas" src="images/seta_para_esquerda.png"/></div>
+						<div id = "seta_direita" class = "hidden"><img class = "setas" src="images/seta_para_direita.png"/></div>
+						<center><div id = "30" class = "BotaoGeral" onclick="change_favourite()"><span></span></div><span>         </span>
+						<div id = "31" class = "BotaoGeral" onclick="fechar_configuracao()"><span>Voltar</span></div></center>
+						<div id = "32" class = "hidden" onclick="return_change_favourite()"></div>
+						<div id = "legenda_configurar_combustivel_marcas_imagem" class="legenda_img"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_configurar_combustivel_marcas_imagem2" class="legenda_img"><img src="images/backlegenda.png"/></div>
+						<div id = "legenda_configurar_combustivel_marcas" class="legenda_menu"><span></span></div>
+					</div>
+					
+					<!-- Configurar combustivel - alerta de autonomia restante -->
+					
+					<div id="configurar_alerta_km" class = "menus">
+						<center><br><span class = "Descricao_menu">Configuração de alerta:</span><br></center>
+						<div id="image_combustivel2"><img class="carousel_image" src="images/sinos_alerta.png"/></div><br><br><br><br><br><br>
+						<div id = "seta_esquerda_2" class = "hidden"><img class = "setas" src="images/seta_para_esquerda.png"/></div>
+						<div id = "seta_direita_2" class = "hidden"><img class = "setas" src="images/seta_para_direita.png"/></div>
+						<center><div id = "35" class = "BotaoGeral" onclick="change_alert()"><span></span></div><span>         </span>
+						<div id = "36" class = "BotaoGeral" onclick="fechar_configuracao2()"><span>Voltar</span></div></center>
+						<div id = "37" class = "hidden" onclick="return_change_alert()"></div>
+						<div id = "legenda_configurar_combustivel_km_imagem" class="legenda_img"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_configurar_combustivel_km_imagem2" class="legenda_img"><img src="images/backlegenda.png"/></div>
+						<div id = "legenda_configurar_combustivel_km" class="legenda_menu"><span></span></div>
+					</div>
+					
+					<!-- Bombas proximas: mapa -->
+					
+					<div id= "Bombas_mapa" class = "menus">
+						<img id="background" src="images/mapa_bombas_ecra.png"/>
+						<div id = "44" class = "hidden" onclick="sair_mapas()"></div>
+					</div>
+					
+					<!-- Alerta de limite de autonomia chegado -->
+					
+					<div id="alerta_combustivel" class = "menus">
+						<center><div id = "aviso_combustivel_baixo" class = "Descricao_menu"><span></span></div></center><br>
+						<span>                                             </span><img src="images/fuel2.gif" alt="Estacionamento" height="40" width="40"><br><br><br>
+						<center><div id="40" class = "BotaoGeral" onclick="como_escolher_bomba()" ><span>Sim</span></div><span>         </span>
+						<div id="41" class = "BotaoGeral" onclick="ignorar_alerta_msg()" ><span>Não</span></div></center>
+						<div id = "legenda_combustivel_pop_up_imagem" class="legenda_img"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_combustivel_pop_up_imagem2"><img src="images/backlegenda.png"/></div>
+						<div id = "legenda_combustivel_pop_up" class="legenda_menu"><span></span></div>
+					</div>
+					
+					<div id="escolher_criterio_bomba" class = "menus">
+						<center><br><span class = "Descricao_menu">Abastecer numa bomba:</span><br></center>
+						<center><div id = "seta_cima"><img class = "setas" src="images/seta_cima.png"/></div></center>
+						<div id="46" class = "item_left" onclick="mostrar_mapa_direcao()"><img class="carousel_image" src="images/combustivel.png"/></div>
+						<div id="47" class = "item_mid" onclick="mostrar_mapa_direcao()" ><img class="carousel_image" src="images/par.png"/></div>
+						<div id="48" class = "item_right" onclick="mostrar_mapa_direcao()"><img class="carousel_image" src="images/mapa_bombas.png"/></div>
+						<div id="49" class = "hidden" onclick="ActivarAjuda()"><img class="carousel_image" src="images/help.png"/></div>
+						<div id = "seta_esquerda_criterio_bomba"><img class = "setas" src="images/seta_para_esquerda.png"/></div>
+						<div id = "seta_direita_criterio_bomba"><img class = "setas" src="images/seta_para_direita.png"/></div>
+						<div id = "hidden_text4" class="carrocel_text"><span>Mais barata</span></div>
+						<div id = "legenda_combustivel_criterio_bomba_imagem" class="legenda_img"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_combustivel_criterio_bomba_imagem2" class="legenda_img"><img src="images/backlegenda.png"/></div>
+						<div id = "legenda_combustivel_criterio_bomba" class="legenda_menu"><span></span></div>
+						</font>
+					</div>
+					
+					<!-- mostrar mapa tendo em conta o criterio escolhido -->
+					
+					<div id= "Bombas_mapa_alerta" class = "menus">
+						<center><img id="background_mapa" src="images/mapas/mais_perto.png"/></center>
+						<div id = "51" class = "hidden" onclick="fechar_selecionado()"></div>
+						<div id = "legenda_combustivel_bombas_mapa_alerta_imagem"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_combustivel_bombas_mapa_alerta_imagem2"><img src="images/backlegenda.png"/></div>
+						<div id = "legenda_combustivel_bombas_mapa_alerta"><span></span></div>
+					</div>
+					
+					<!-- pretende ignorar o aviso? -->
+					<div id="ignorar_alerta_pop" class = "menus">
+						<center><br><div id = "aviso_combustivel_baixo" class = "Descricao_menu"><span><br>Tem a certeza que pretende ignorar o alerta?</span></div></center><br>
+						<span>                                             </span><img src="images/fuel2.gif" alt="Estacionamento" height="40" width="40"><br><br><br>
+						<center><div id="53" class = "BotaoGeral" onclick="ignorar_alerta()" ><span>Sim</span></div><span>         </span>
+						<div id="54" class = "BotaoGeral" onclick="alerta_combustivel_func()" ><span>Não</span></div></center>
+						<div id = "legenda_combustivel_pop_up_ignora_imagem" class="legenda_img"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_combustivel_pop_up_ignora_imagem2"><img src="images/backlegenda.png"/></div>
+						<div id = "legenda_combustivel_pop_up_ignora" class="legenda_menu"><span></span></div>
+					</div>
+
+					<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+					     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+						 ///                                                                                                                ///
+						 ///                                               Personalizacao                                                   ///
+						 ///                                                                                                                ///
+						 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+					     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+					-->
+                    <!-- Menu Inicial - Personalizao -->
+					<div id="carousel_personalizar" class = "menus">
+						<center><br><span class = "Descricao_menu">Selecione o modelo:</span><br></center>
+						<center><div id = "seta_cima"><img class = "setas" src="images/seta_cima.png"/></div></center>
+						<div id="20" class = "item_left" onclick="ActivarOuEditarModelo()"><img id = "carro_pequeno_editar_imagem" class="carousel_image" src="images/carro_pequeno.png"/></div>
+						<div id="21" class = "item_mid" onclick="ActivarOuEditarModelo()" ><img id = "carro_medio_editar_imagem" class="carousel_image" src="images/carro_medio.png"/></div>
+						<div id="22" class = "item_right" onclick="ActivarOuEditarModelo()"><img id = "carro_grande_editar_imagem" class="carousel_image" src="images/carro_grande.png"/></div>
+						<div id="23" class = "hidden" onclick="ActivarAjuda()"><img class="carousel_image" src="images/help.png"/></div>
+						<div id = "seta_esquerda_personalizar_geral"><img class = "setas" src="images/seta_para_esquerda.png"/></div>
+						<div id = "seta_direita_personalizar_geral"><img class = "setas" src="images/seta_para_direita.png"/></div>
+						<div id = "hidden_text3" class="carrocel_text"><span>Medio</span></div>
+						<div id = "legenda_personalizar_geral_imagem" class="legenda_img"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_personalizar_geral_imagem2"><img src="images/backlegenda.png"/></div>
+						<div id = "legenda_personalizar_geral" class="legenda_menu"><span></span></div>
+						</font>
+					</div> 
+					
+					<div id="ActivarOuEditar" class = "menus">
+						<center><br><span class = "Descricao_menu">Pretende:</span><br><br></center>
+						<div class = "item_mid"><img id ="modelo_a_editar_ativar"class="carousel_image" src="images/carro_pequeno.png"/></div><br><br><br><br><br>
+						<center><div id = "82" class = "BotaoGeral" onclick="QuerActivarModelo()"><span>Activar</span></div>
+						<div id = "83" class = "BotaoGeral" onclick="QuerEditarModelo()"><span>Editar</span></div>
+						<div id = "84" class = "BotaoGeral" onclick="CancelarActivarEditar()"><span>Voltar</span></div></center>
+						<div id = "legenda_personalizar_geral_activar_editar_imagem" class="legenda_img"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_personalizar_geral_activar_editar_imagem2"><img src="images/backlegenda.png"/></div>
+						<div id = "legenda_personalizar_geral_activar_editar" class="legenda_menu"><span></span></div>
+					</div>
+					
+					<div id= "ConcluidoAtivarModelo" class = "menus">
+						<center><div id = "ModoAtivado"><span class = "Descricao_menu"></span><br></div></center>
+						<span>                                             </span><img src="images/visto.png" alt="Estacionamento" height="40" width="40">
+					</div>
+					
+					<div id="carousel_editar_modelo" class = "menus">
+						<center><br><span class = "Descricao_menu">Selecione o que modificar:</span><br></center>
+						<center><div id = "seta_cima"><img class = "setas" src="images/seta_cima.png"/></div></center>
+						<div id="87" class = "item_left" onclick="ActivarEditarBagageira()"><img class="carousel_image" src="images/bag.png"/></div>
+						<div id="88" class = "item_mid" onclick="ActivarEditarBancos()" ><img class="carousel_image" src="images/sit.png"/></div>
+						<div id="89" class = "item_right" onclick="ActivarAjuda()"><img class="carousel_image" src="images/help.png"/></div>
+						<div id = "seta_esquerda_personalizar_modelo"><img class = "setas" src="images/seta_para_esquerda.png"/></div>
+						<div id = "seta_direita_personalizar_modelo"><img class = "setas" src="images/seta_para_direita.png"/></div>
+						<div id = "hidden_text6" class="carrocel_text"><span>Bancos</span></div>
+						<div id = "legenda_personalizar_editar_modelo_imagem" class="legenda_img"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_personalizar_editar_modelo_imagem2"><img src="images/backlegenda.png"/></div>
+						<div id = "legenda_personalizar_editar_modelo" class="legenda_menu"><span></span></div>
+						</font>
+					</div>
+					
+					<div id="EditarBancos" class = "menus">
+						<center><br><div id = "bancos_desc"><span class = "Descricao_menu">Alterar o número de bancos:</span></div><center>
+						<span>                                             </span><div id="bancosIMG"><img class="carousel_image" src=""/></div><br>
+						<div id = "seta_esquerda3" class = "hidden"><img class = "setas" src="images/seta_para_esquerda.png"/></div>
+						<div id = "seta_direita3" class = "hidden"><img class = "setas" src="images/seta_para_direita.png"/></div>
+						<center><div id = "92" class = "BotaoGeral" onclick="mudar_bancos()"><span></span></div><span>         </span>
+						<div id = "93" class = "BotaoGeral" onclick="SairBancos()"><span></span></div></center>
+						<div id = "94" class = "hidden" onclick="return_mudar_bancos()"></div>
+						<div id = "legenda_editar_bancos_imagem" class="legenda_img"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_editar_bancos_imagem2"><img src="images/backlegenda.png"/></div>
+						<div id = "legenda_editar_bancos" class="legenda_menu"><span></span></div>
+					</div>
+					
+					<div id="EditarBagagem" class = "menus">
+						<center><br><div id = "bagageira_desc"><span class = "Descricao_menu">Alterar o tamanho da bagageira:</span><br></div><center>
+						<span>                                             </span><div id = "bagageiraIMG"><img class="carousel_image" src=""/></div><br>
+						<div id = "seta_esquerda4" class = "hidden"><img class = "setas" src="images/seta_para_esquerda.png"/></div>
+						<div id = "seta_direita4" class = "hidden"><img class = "setas" src="images/seta_para_direita.png"/></div>
+						<center><div id = "97" class = "BotaoGeral" onclick="mudar_bagageira()"><span></span></div><span>         </span>
+						<div id = "98" class = "BotaoGeral" onclick="SairBagageira()"><span></span></div></center>
+						<div id = "99" class = "hidden" onclick="return_mudar_bagageira()"></div>
+						<div id = "legenda_editar_bagagem_imagem" class="legenda_img"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_editar_bagagem_imagem2"><img src="images/backlegenda.png"/></div>
+						<div id = "legenda_editar_bagagem" class="legenda_menu"><span></span></div>
+					</div>
+					
+					
+					<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+					     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+						 ///                                                                                                                ///
+						 ///                                               Parquimetro                                                      ///
+						 ///                                                                                                                ///
+						 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+					     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+					-->
+
+					<div id="MenuDoParque" class = "menus">
+						<center><div class = "Descricao_menu"><span class = "Descricao_menu"><br>Área de estacionamento pago.<br>0.02€/minuto.</span></font><br></div><br></center>
+						<img id="time" src="images/time.png" alt="Estacionamento"><br><br>
+						<center><div id="26" class = "BotaoGeral" onclick="IniciarParque()"><span>Iniciar</span></div><span>         </span>
+						<div id="27" class = "BotaoGeral" onclick="IgnorarParque()" ><span>Ignorar</span></div></center>
+						<div id = "legenda_paquimetro_pop_up_imagem" class="legenda_img"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_paquimetro_pop_up_imagem2"><img src="images/backlegenda.png"/></div>
+						<div id = "legenda_paquimetro_pop_up" class="legenda_menu"><span></span></div>
+					</div>
+
+					<div id = "popup_estacionamento_ignora" class = "menus">
+						<center><br><div class = "Descricao_menu"><span class = "Descricao_menu">Tem a certeza que quer ignorar?</span></div><br><br></center>
+						<span>                                             </span><img id = "time" src="images/alerta.png" alt="Estacionamento" height="40" width="40"><br><br><br>
+						<center><div id = "57" class = "BotaoGeral" onclick="QuerIgnorar()"><span>Sim</span></div><span>         </span>
+						<div id = "58" class = "BotaoGeral" onclick="NaoQuerIgnorar()"><span>Não</span></div></center>
+						<div id = "legenda_paquimetro_pop_up_ignora_imagem" class="legenda_img"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_paquimetro_pop_up_ignora_imagem2"><img src="images/backlegenda.png"/></div>
+						<div id = "legenda_paquimetro_pop_up_ignora" class="legenda_menu"><span></span></div>
+					</div>
+
+					<div id="AContar" class = "menus">
+						<br><br><span>                                      </span><img src="images/relogio.png" alt="Estacionamento" height="100" width="100"><br><br>
+						<center><div id = "60" class = "BotaoGeral sair_ajuda_botao" onclick="PararAContagem()"><span>Parar Contagem</span></div></center>
+						<div id = "legenda_paquimetro_pop_up_imagem" class="legenda_img"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_paquimetro_pop_up2_imagem2"><img src="images/backlegenda.png"/></div>
+						<div id = "legenda_paquimetro_pop_up2" class="legenda_menu"><span></span></div>
+					</div>
+					<div id= "ImagemAContar"><br><img src="images/anigif.gif" alt="Estacionamento" height="35" width="122"><br><br></div>
+
+					<div id="MetodoPagamento" class = "menus">
+						<center><div id = "ex"><span class = "Descricao_menu"></span><br></div></center>
+						<center><div id = "seta_cima"><img class = "setas" src="images/seta_cima.png"/></div></center>
+						<div id="63" class = "item_left" onclick="PagarDinheiro()"><img class="carousel_image" src="images/dinheiro.png"/></div>
+						<div id="64" class = "item_mid" onclick="PagarDebito()" ><img class="carousel_image" src="images/credit.png"/></div>
+						<div id="65" class = "item_right" onclick="PagarNosCTT()"><img class="carousel_image" src="images/ctt4.png"/></div>
+						<div id="66" class = "hidden" onclick="ActivarAjuda()"><img class="carousel_image" src="images/help.png"/></div>
+						<div id = "seta_esquerda_paquimetro_metodo_pagamento"><img class = "setas" src="images/seta_para_esquerda.png"/></div>
+						<div id = "seta_direita_paquimetro_metodo_pagamento"><img class = "setas" src="images/seta_para_direita.png"/></div>
+						<div id = "hidden_text5" class="carrocel_text"><span>Débito Directo</span></div>
+						<div id = "legenda_paquimetro_metodo_pagamento_imagem" class="legenda_img"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_paquimetro_metodo_pagamento_imagem2"><img src="images/backlegenda.png"/></div>
+						<div id = "legenda_paquimetro_metodo_pagamento" class="legenda_menu"><span></span></div>
+						</font>
+					</div>
+
+					<div id = "popup_continuar_contar" class = "menus">
+						<center><div class = "Descricao_menu"><br><br><span>Pretende continuar a contar o tempo?</span></font><br><br></div></center>
+						<span>                                             </span><img src="images/alerta.png" alt="Estacionamento" height="40" width="40"><br><br><br>
+						<center><div id = "68" class = "BotaoGeral" onclick="continuar_a_contar()"><span>Sim</span></div><span>         </span>
+						<div id = "69" class = "BotaoGeral" onclick="n_continuar_a_contar()"><span>Não</span></div></center>
+						<div id = "legenda_paquimetro_continuar_a_contar_imagem" class="legenda_img"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_paquimetro_continuar_a_contar_imagem2"><img src="images/backlegenda.png"/></div>
+						<div id = "legenda_paquimetro_continuar_a_contar" class="legenda_menu"><span></span></div>
+					</div>
+					
+					<div id= "PagarComDinheiro" class = "menus">
+						<center><div id = "ex3"><span class = "Descricao_menu"></span><br></div></center><br>
+						<div class = "item_mid"><img src="images/dinheiro.png" class = "carousel_image"></div><br><br><br><br>
+						<center><div id = "75" class = "BotaoGeral" onclick="QuerConfirmarDinheiro()"><span>Confirmar</span></div><span>         </span>
+						<div id = "76" class = "BotaoGeral" onclick="QuerCancelarDinheiro()"><span>Cancelar</span></div></center>
+						<div id = "legenda_paquimetro_metodo_pagamento_dinheiro_imagem" class="legenda_img"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_paquimetro_metodo_pagamento_dinheiro_imagem2"><img src="images/backlegenda.png"/></div>
+						<div id = "legenda_paquimetro_metodo_pagamento_dinheiro" class="legenda_menu"><span></span></div>
+					</div>
+					
+					<div id= "ConcluidoPagamentoDinheiro" class = "menus">
+						<br><br><br><center><span class = "Descricao_menu">Dirija-se a um posto CTT para efectuar o pagamento<br>Boa Viagem!</span></center><br><br>
+						<span>                                             </span><img src="images/visto.png" alt="Estacionamento" height="40" width="40"><br><br>
+						<div id="66" class = "hidden" onclick=""></div>
+					</div>	
+					
+					<center><div id= "mapa_pagamento" class = "menus">
+						<img id="background" src="images/mapas/parquimetrocenas.png"/>
+						<div id = "77" class = "hidden" onclick="desligar()"></div>
+						<div id = "legenda_paquimetro_metodo_pagamento_dinheiro_mapa_imagem" class="legenda_img"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_paquimetro_metodo_pagamento_dinheiro_mapa_imagem2"><img src="images/backlegenda.png"/></div>
+						<div id = "legenda_paquimetro_metodo_pagamento_dinheiro_mapa" class="legenda_menu"><span></span></div>
+					</div></center>
+
+					<div id= "PagarComDebito" class = "menus">
+						<center><div id = "ex2"><span class = "Descricao_menu"></span><br></div></center>
+						<div class = "item_mid"><img src="images/credit.png" class = "carousel_image"><br></div><br><br><br><br><br>
+						<center><div id = "71" class = "BotaoGeral" onclick="QuerConfirmarDebito()"><span>Confirmar</span></div><span>         </span>
+						<div id = "72" class = "BotaoGeral" onclick="QuerCancelarDebito()"><span>Cancelar</span></div></center>
+						<div id = "legenda_paquimetro_metodo_pagamento_debito_imagem" class="legenda_img"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_paquimetro_metodo_pagamento_debito_imagem2"><img src="images/backlegenda.png"/></div>
+						<div id = "legenda_paquimetro_metodo_pagamento_debito" class="legenda_menu"><span></span></div>
+					</div>
+
+					<div id= "ConcluidoPagamentoDebito" class = "menus">
+					<br><br><br><center><span class = "Descricao_menu">Pagamento efectuado com sucesso!<br>Boa Viagem!</span></center><br><br>
+						<span>                                             </span><img src="images/visto.png" alt="Estacionamento" height="40" width="40"><br><br>
+					</div>		
+
+					<div id= "PagarCTT" class = "menus">
+						<center><div id = "ex4"><span class = "Descricao_menu"></span><br></div></center>
+						<div class = "item_mid"><img src="images/ctt4.png" class = "carousel_image"></div><br><br><br><br><br>
+						<center><div id = "79" class = "BotaoGeral" onclick="QuerConfirmarCTT()"><span>Sim</span></div><span>         </span>
+						<div id = "80" class = "BotaoGeral" onclick="QuerCancelarCTT()"><span>Não</span></div></center>
+						<div id = "legenda_paquimetro_metodo_pagamento_CTT_imagem" class="legenda_img"><img src="images/oklegenda.png"/></div>
+						<div id = "legenda_paquimetro_metodo_pagamento_CTT_imagem2"><img src="images/backlegenda.png"/></div>
+						<div id = "legenda_paquimetro_metodo_pagamento_CTT" class="legenda_menu"><span></span></div>
+					</div>
+		</div>
+</body>
+</html>	
